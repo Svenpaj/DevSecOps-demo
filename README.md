@@ -3,3 +3,5 @@ To run :
 
 To run tests: 
 >npm run test || npm run test:run
+
+I am new text
