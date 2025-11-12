@@ -2,7 +2,7 @@ name: CI Tests
 on: [push, pull_request]
 
 jobs:
-  test:
+  unit-tests:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -12,5 +12,11 @@ jobs:
           node-version: '18'
       - name: Install dependencies
         run: npm install
-      - name: Run tests
-        run: npm test --ci --coverage
+      - name: Run tests with coverage
+        run: npm run test:ci
+      - name: Upload coverage reports
+        uses: codecov/codecov-action@v3
+        with:
+          file: ./coverage/lcov.info
+          flags: unittests
+          name: codecov-umbrella
