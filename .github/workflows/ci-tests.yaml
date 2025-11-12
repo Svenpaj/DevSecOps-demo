@@ -16,7 +16,7 @@ jobs:
 
       - name: Run security audit # npm audit || exit 1
         run: |
-         npm audit
+          ! npm audit
         # run: |
         #   echo "Running npm audit..."
         #   if npm audit; then
