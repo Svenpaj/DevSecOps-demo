@@ -3,84 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DevSecOps Demo</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            max-width: 800px;
-            margin: 50px auto;
-            padding: 20px;
-            background: #f5f5f5;
-        }
-        .container {
-            background: white;
-            padding: 40px;
-            border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-        h1 {
-            color: #333;
-        }
-        .status {
-            padding: 10px;
-            margin: 20px 0;
-            border-radius: 5px;
-            background: #d4edda;
-            color: #155724;
-        }
-        button {
-            background: #007bff;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 16px;
-        }
-        button:hover {
-            background: #0056b3;
-        }
-        #result {
-            margin-top: 20px;
-            padding: 15px;
-            background: #f8f9fa;
-            border-radius: 5px;
-            display: none;
-        }
-    </style>
+    <title>DevSecOps 25 HAK Demo</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
-        <h1>DevSecOps Demo</h1>
+        <h1>DevSecOps 25 HAK Demo</h1>
         <p>En enkel demo för GitHub Actions CI/CD</p>
         
-        <div class="status">
-            <strong>Status:</strong> Applikationen körs!
+        <div id="status" class="status">
+            <strong>Status:</strong> N/A
         </div>
         
-        <button onclick="checkHealth()">Testa Health Check</button>
+        <button>Testa Health Check</button>
         
         <div id="result"></div>
     </div>
-
-    <script>
-        async function checkHealth() {
-            const resultDiv = document.getElementById('result');
-            
-            try {
-                const response = await fetch('/api/health');
-                const data = await response.json();
-                
-                resultDiv.style.display = 'block';
-                resultDiv.innerHTML = `
-                    <h3>Health Check OK</h3>
-                    <pre>${JSON.stringify(data, null, 2)}</pre>
-                `;
-            } catch (error) {
-                resultDiv.style.display = 'block';
-                resultDiv.innerHTML = `<h3>Fel: ${error.message}</h3>`;
-            }
-        }
-    </script>
+    <script type="module" src="main.js"></script>
 </body>
 </html>

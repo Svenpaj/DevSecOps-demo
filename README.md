@@ -1,1 +1,1 @@
-To run *npm install* -> *npm node index.js*
+To run *npm install* -> *npm node server.js*
