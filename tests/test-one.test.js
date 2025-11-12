@@ -13,7 +13,7 @@ import {
 describe('Simple Math Tests', () => {
 
   test('addition works correctly', () => {
-    expect(2 + 2).toBe(4);
+    expect(2 + 1).toBe(4);
   });
 
   test('subtraction works correctly', () => {
