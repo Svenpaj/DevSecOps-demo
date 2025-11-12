@@ -1,7 +1,7 @@
 {
   "name": "devsecops-demo",
   "version": "1.0.0",
-  "description": "Simple demo for GitHub Actions",
+  "description": "A little demo project for DevSecOps with GitHub Actions",
   "main": "server.js",
   "type": "module",
   "scripts": {

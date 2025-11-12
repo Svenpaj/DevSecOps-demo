@@ -19,9 +19,3 @@ jobs:
         with:
           name: coverage-report
           path: coverage/
-      - name: Display coverage summary
-        run: |
-          echo "## Coverage Report" >> $GITHUB_STEP_SUMMARY
-          if [ -f coverage/lcov-report/index.html ]; then
-            echo "Coverage report uploaded as artifact" >> $GITHUB_STEP_SUMMARY
-          fi
