@@ -13,26 +13,17 @@ jobs:
           
       - name: Install dependencies
         run: npm install
-        
-      # - name: Run security audit
-      #   run: |
-      #     echo "Running npm audit..."
-      #     npm audit
-      #     if [ $? -ne 0 ]; then
-      #       echo "Security vulnerabilities found! Build failed."
-      #       exit 1
-      #     fi
-      #     echo "No vulnerabilities found. Security check passed."
 
-      - name: Run security audit 2
-        run: |
-          echo "Running npm audit..."
-          if ! npm audit; then
-            echo "No vulnerabilities found. Security check passed."
-          else
-            echo "Security vulnerabilities found! Build failed."
-            exit 1
-          fi
+      - name: Run security audit # npm audit || exit 1
+        run: ! npm audit
+        # run: |
+        #   echo "Running npm audit..."
+        #   if npm audit; then
+        #     echo "No vulnerabilities found. Security check passed."
+        #   else
+        #     echo "Security vulnerabilities found! Build failed."
+        #     exit 1
+        #   fi
           
 
 
