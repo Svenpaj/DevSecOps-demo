@@ -6,12 +6,20 @@ export default defineConfig({
       provider: 'v8',
       reporter: ['text', 'json', 'html', 'lcov'],
       reportsDirectory: './coverage',
+      // thresholds: {
+      //   lines: 80,      
+      //   functions: 80,  
+      //   branches: 80,   
+      //   statements: 80, 
+      // },
       exclude: [
         'node_modules/',
         'dist/',
         '**/*.test.js',
         '**/*.spec.js',
       ],
+
+      // all: true
     },
   },
 });
