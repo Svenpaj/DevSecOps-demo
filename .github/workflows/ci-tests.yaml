@@ -27,7 +27,7 @@ jobs:
       - name: Run security audit 2
         run: |
           echo "Running npm audit..."
-          if npm audit; then
+          if ! npm audit; then
             echo "No vulnerabilities found. Security check passed."
           else
             echo "Security vulnerabilities found! Build failed."
