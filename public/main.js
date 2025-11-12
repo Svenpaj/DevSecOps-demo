@@ -25,7 +25,6 @@ async function checkHealth() {
 async function loadUsers() {
     const usersListDiv = document.getElementById('users-list');
     
-    // Show loading message
     usersListDiv.innerHTML = '<div class="loading">Laddar användare...</div>';
     
     try {
@@ -42,7 +41,6 @@ async function loadUsers() {
             return;
         }
         
-        // Create user cards
         const userCards = users.map(user => `
             <div class="user-card">
                 <h3 class="user-name">${user.name}</h3>

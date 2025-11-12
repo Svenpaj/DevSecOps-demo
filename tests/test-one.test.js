@@ -47,7 +47,6 @@ describe('User Service Tests', () => {
   let mockUsers;
   
   beforeEach(() => {
-    // Mock data for testing
     mockUsers = [
       { id: 1, name: "John Doe", email: "john@example.com", age: 30, role: "admin" },
       { id: 2, name: "Jane Smith", email: "jane@example.com", age: 25, role: "user" },
@@ -203,7 +202,6 @@ describe('User Service Tests', () => {
       expect(Array.isArray(users)).toBe(true);
       expect(users.length).toBeGreaterThan(0);
       
-      // Check structure of first user
       if (users.length > 0) {
         expect(users[0]).toHaveProperty('id');
         expect(users[0]).toHaveProperty('name');
