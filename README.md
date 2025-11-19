@@ -6,3 +6,4 @@ To run tests:
 
 I am new text
 New text in readme
+Make change
